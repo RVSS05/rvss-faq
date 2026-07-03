@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RVSS よくある質問（FAQ）</title>
+  <meta name="description" content="REAL VALUE STUDENTS（RVSS）の応募・入会、活動内容、稼働時間、使用ツール、評価・報酬、よくある不安についてのFAQです。">
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --paper: #fffaf0;
+      --text: #171717;
+      --muted: #5c5c5c;
+      --line: #e8ddc7;
+      --gold: #d8b35a;
+      --gold-deep: #9d7623;
+      --black: #111827;
+      --soft: #fff3d6;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.75;
+      background:
+        radial-gradient(circle at top left, rgba(216, 179, 90, 0.24), transparent 30rem),
+        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.06), transparent 28rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(940px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 26px 30px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: rgba(255, 250, 240, 0.92);
+      box-shadow: 0 22px 60px rgba(45, 34, 10, 0.09);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -72px;
+      top: -82px;
+      width: 230px;
+      height: 230px;
+      border-radius: 999px;
+      background: rgba(216, 179, 90, 0.2);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 42px;
+      bottom: -90px;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      border: 1px solid rgba(216, 179, 90, 0.45);
+    }
+
+    .badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border: 1px solid #ead59a;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--gold-deep);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      position: relative;
+      margin: 18px 0 10px;
+      font-size: clamp(30px, 6vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      position: relative;
+      max-width: 730px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .toc {
+      position: relative;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--black);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.04);
+    }
+
+    .summary-card {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .summary-card div {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      font-size: 13px;
+      color: #3b3b3b;
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--black);
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    section {
+      margin-top: 26px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 12px 32px rgba(45, 34, 10, 0.045);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+      line-height: 1.35;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+      padding: 0;
+      background: transparent;
+    }
+
+    details:first-of-type {
+      border-top: 0;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 0;
+      font-weight: 850;
+      color: var(--black);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--gold-deep);
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .answer {
+      padding: 0 0 18px;
+      color: #303030;
+    }
+
+    .answer p {
+      margin: 0 0 10px;
+    }
+
+    ul, ol {
+      margin: 8px 0 0 1.2em;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--gold);
+      background: #fff8e8;
+      border-radius: 12px;
+      color: #3a321e;
+    }
+
+    .cta {
+      margin-top: 26px;
+      padding: 26px;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top right, rgba(216, 179, 90, 0.2), transparent 16rem),
+        linear-gradient(135deg, #101827 0%, #25272d 100%);
+      color: var(--white);
+      box-shadow: 0 22px 52px rgba(17, 24, 39, 0.2);
+    }
+
+    .cta h2 {
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      margin: 0 0 12px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .cta-box {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .cta-box strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #ffe8a3;
+      font-size: 15px;
+    }
+
+    .main-action {
+      border-color: rgba(216, 179, 90, 0.62);
+      background: rgba(216, 179, 90, 0.13);
+    }
+
+    .pill {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(216, 179, 90, 0.18);
+      border: 1px solid rgba(216, 179, 90, 0.48);
+      color: #ffe8a3;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100% - 22px, 940px);
+        padding-top: 14px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        padding: 30px 18px 24px;
+      }
+
+      section {
+        border-radius: 20px;
+        padding: 18px;
+      }
+
+      .summary-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      summary {
+        font-size: 15px;
+      }
+
+      .answer {
+        font-size: 14.5px;
+      }
+
+      .toc a {
+        font-size: 12px;
+        padding: 7px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="badge">REAL VALUE STUDENTS / FAQ</span>
+      <h1>RVSS よくある質問</h1>
+      <p class="lead">応募・入会、活動内容、稼働時間、使用ツール、評価・報酬など、RVSSに参加する前に気になりやすい内容をまとめています。</p>
+
+      <div class="summary-card" aria-label="FAQの要点">
+        <div><strong>参加費無料</strong>応募料・月会費はかかりません。</div>
+        <div><strong>全国から参加可能</strong>オンライン中心で活動できます。</div>
+        <div><strong>まずは合説へ</strong>詳しく知りたい方は公式LINEのリッチメニューから。</div>
+      </div>
+
+      <nav class="toc" aria-label="FAQカテゴリ">
+        <a href="#entry">応募・入会</a>
+        <a href="#about">RVSSについて</a>
+        <a href="#start">入会後の流れ</a>
+        <a href="#time">稼働時間・MTG</a>
+        <a href="#tools">使用ツール</a>
+        <a href="#reward">評価・報酬</a>
+        <a href="#worry">不安・心配ごと</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <section id="entry">
+      <h2>📋 応募・入会について</h2>
+
+      <details open>
+        <summary>入会するのに費用はかかりますか？</summary>
+        <div class="answer">
+          <p>費用は一切かかりません。RVSSへの入会・活動はすべて無料です。応募料や月会費なども発生しません。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>どうやって応募すればいいですか？</summary>
+        <div class="answer">
+          <p>応募方法は主に以下の2つです。</p>
+          <ul>
+            <li>公募：SNS（Instagram等）やイベント等を通じて公式LINEからエントリー</li>
+            <li>リファラル（紹介）：既存メンバーからの紹介</li>
+          </ul>
+          <p class="note">流れ：合同説明会参加フォーム → 合同説明会参加 → 書類選考 → 面接（オンライン） → 合否連絡 → キックオフ・オンボーディング開始</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>いつでも入会できますか？募集時期はありますか？</summary>
+        <div class="answer">
+          <p>通年で募集しています。特に4月の新歓シーズンは積極的に採用を行っていますが、時期を問わずエントリー可能です。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>面接前に準備しておくことはありますか？</summary>
+        <div class="answer">
+          <p>以下を事前にチェックしておくと、面接がより充実したものになります。</p>
+          <ul>
+            <li>REAL VALUEのYouTubeチャンネルを視聴して、団体の雰囲気を掴む</li>
+            <li>RVSSのSNS（X / Instagram）をフォローして活動内容を確認する</li>
+            <li>「RVSSで挑戦してみたいこと」を簡単に考えておく</li>
+          </ul>
+          <p>必須ではありませんが、準備しておくと面接での会話がスムーズになります。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>他のサークルやインターンと掛け持ちできますか？</summary>
+        <div class="answer">
+          <p>掛け持ち自体は可能です。ただし、RVSSでは週15時間の稼働と定例MTGへの参加が求められます。他の活動との両立が現実的に可能かどうか、応募前にスケジュールを確認しておくことをおすすめします。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>友達と一緒に入ることはできますか？</summary>
+        <div class="answer">
+          <p>はい、リファラル（紹介）での応募も歓迎しています。ただし、選考は一人ひとり個別に行われます。友達同士でも、それぞれが面接を受けて合否が決まります。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="about">
+      <h2>🏠 RVSSってどんなところ？</h2>
+
+      <details>
+        <summary>そもそもRVSSって何をしている団体ですか？</summary>
+        <div class="answer">
+          <p>REAL VALUE STUDENTS（RVSS）は、経営者コミュニティ「REAL VALUE」の学生支部です。</p>
+          <p>「日本をもう一度挑戦者に」というビジョンのもと、学生が実際のプロジェクトに参画しながら実践的なスキルを身につけるコミュニティです。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>どんな部署・チームがありますか？自分はどこに入るんですか？</summary>
+        <div class="answer">
+          <p>RVSSには主に以下のような部署があります。</p>
+          <ul>
+            <li>人事（採用・育成・評価・企画）</li>
+            <li>広報（SNS運用・コンテンツ制作）</li>
+            <li>総務（情報システム、財務・法務、OB会）</li>
+            <li>各プロジェクトチーム（RVC、NoBorder、アカデミアなど）</li>
+          </ul>
+          <p>入会直後にいきなり配属されるわけではありません。約1ヶ月の試用期間を経て、希望と適性をもとに部署が決まります。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>関東・関西など支部があるようですが、自分はどこに所属しますか？</summary>
+        <div class="answer">
+          <p>所属大学のエリアに基づいて支部が決まります（関東・関西・中部・九州など）。活動はオンラインが中心なので、エリアをまたいだ連携も日常的にあります。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>メンバーは何人くらいいますか？どんな大学の人がいますか？</summary>
+        <div class="answer">
+          <p>全国各地の大学から約40名以上の学生が参加しています。慶應・早稲田・立命館・京大・上智・明治・名古屋・神戸・九州大・長崎大など、多種多様な大学のメンバーが在籍しています。</p>
+          <p>学年もさまざまで、1年生から大学院生まで幅広く活動しています。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="start">
+      <h2>🚀 入会後、最初に何をすればいい？</h2>
+
+      <details>
+        <summary>入会してから正式に活動するまでの流れを教えてください</summary>
+        <div class="answer">
+          <p>以下のステップで進みます。</p>
+          <ol>
+            <li>面接 → 合格</li>
+            <li>オンボーディング（約1ヶ月）</li>
+            <li>希望部署PMとの1on1 → 部署・チームアサイン</li>
+          </ol>
+          <p>試用期間中にRVSSの文化を理解しながら、自分に合ったポジションを見つけていきましょう。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="time">
+      <h2>⏰ 稼働時間・MTGについて</h2>
+
+      <details>
+        <summary>週にどのくらい活動する必要がありますか？忙しいですか？</summary>
+        <div class="answer">
+          <p>目安は週15時間です。</p>
+          <p>大学の授業やバイトと両立しているメンバーがほとんどです。MTGはオンラインが中心なので、場所を選ばず参加できます。稼働時間は「AI管理表」というNotionのデータベースで管理します。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>定例MTGは週に何回ありますか？全部出ないとダメですか？</summary>
+        <div class="answer">
+          <p>全体定例は土曜9:25〜11:00で、全メンバー必須です。その他、各部署の定例は所属部署やプロジェクトによって変わります。</p>
+          <p>部署や役職によっては複数の定例MTGに参加するメンバーも多いです。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>どうしてもMTGに出られない場合はどうすればいいですか？</summary>
+        <div class="answer">
+          <p>事前に連絡し、事情を伝えることで欠席が認められる場合があります。無断欠席は評価に大きく影響します。事前連絡を徹底しましょう。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="tools">
+      <h2>💬 使用ツールについて</h2>
+
+      <details>
+        <summary>連絡・情報管理はどのツールを使っていますか？</summary>
+        <div class="answer">
+          <p>LINE・Slackを使っています。情報管理のツールとしてNotion、Googleスプレッドシートを使っています。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Slack・Notionを使ったことがないのですが、大丈夫ですか？</summary>
+        <div class="answer">
+          <p>大丈夫です。入会後にSlack・Notion・議事録研修があり、基本的な使い方を学べます。また、Notionの操作方法はRVSSのナレッジページにもまとめられています。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="reward">
+      <h2>📊 評価・報酬について</h2>
+
+      <details>
+        <summary>どうやって評価されるんですか？</summary>
+        <div class="answer">
+          <p>RVSSでは主に以下の仕組みで評価されます。</p>
+          <ul>
+            <li>360度評価：メンバー同士で相互評価し、行動習慣を数値化</li>
+            <li>AI管理表：タスクの完了状況・稼働時間・成果物を記録</li>
+            <li>出席率：MTGへの参加状況も評価の一要素</li>
+          </ul>
+          <p>「スキル」だけでなく、「姿勢」や「周囲への影響力」も重視されます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>報酬（給与）はもらえますか？いつからですか？</summary>
+        <div class="answer">
+          <p>基礎研修をすべて完了した後、固定給が支給されます。入会直後の試用期間・研修期間は無償です。</p>
+          <p>基礎給に加え、360度評価スコア・出席率に応じて変動します。スクール受講完了による加算もあります。</p>
+          <p>頑張った分だけ報酬に反映される仕組みです。まずは研修をしっかり完了させましょう。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>スキルアップのための研修やスクールはありますか？</summary>
+        <div class="answer">
+          <p>はい、試用期間後も以下のようなインプット機会があります。</p>
+          <ul>
+            <li>AIスクール</li>
+            <li>SNSスクール</li>
+            <li>動画編集スクール</li>
+            <li>RVSS独自の育成カリキュラム</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section id="worry">
+      <h2>🤔 よくある不安・心配ごと</h2>
+
+      <details>
+        <summary>大学の授業やバイトと両立できますか？</summary>
+        <div class="answer">
+          <p>多くのメンバーが大学生活と両立しています。MTGはオンライン中心で、場所を選ばず参加できます。ただし、スケジュール管理は自分の責任です。無理のない範囲で計画的に活動しましょう。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>地方に住んでいても参加できますか？</summary>
+        <div class="answer">
+          <p>はい、全国どこからでも参加できます。活動はオンラインが中心なので、場所は関係ありません。実際に北海道から九州、海外大学の学生もメンバーとして活躍しています。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>特別なスキルがなくても大丈夫ですか？</summary>
+        <div class="answer">
+          <p>大丈夫です。RVSSは「スキルがある人が入る場所」ではなく、「スキルを身につけていく場所」です。研修やスクール、実際のプロジェクト参加を通じて段階的にスキルを習得できます。</p>
+          <p>大切なのは、積極的に学ぶ姿勢と行動力です。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="contact" class="cta">
+      <h2>💌 お問い合わせ・より詳しく知りたい方へ</h2>
+      <p>よくあるご質問で解決しなかった場合は、公式LINEのリッチメニューから「お問い合わせ」をタップしたうえで、このLINEにそのままご質問内容を送ってください。</p>
+      <p>担当者が確認後、順次ご返信します。</p>
+
+      <div class="cta-grid">
+        <div class="cta-box">
+          <strong>質問したい場合</strong>
+          <p>公式LINEに戻り、リッチメニューの「お問い合わせ」をタップしてください。</p>
+        </div>
+
+        <div class="cta-box main-action">
+          <strong>活動内容や参加までの流れを詳しく知りたい場合</strong>
+          <p>公式LINEのトーク画面に戻り、リッチメニューの「オンライン合同説明会」をタップしてください。</p>
+          <span class="pill">オンライン合同説明会</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">© REAL VALUE STUDENTS / FAQ</p>
+  </main>
+</body>
+</html>
